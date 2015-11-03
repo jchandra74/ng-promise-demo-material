@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Demo 03 - Exception Handling</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div ng-controller="pageCtrl as vm">
+      <div ng-if="!vm.currentDoc" ng-cloak>{{ vm.progressText }}</div>
+      <div ng-if="vm.currentDoc" ng-cloak>
+        Document Title: {{ vm.currentDoc.title }}<br/>
+        Subscriber: {{ vm.currentDoc.subscriber.name }}
+      </div>
+    </div>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Demo 02 - Promise Chaining</title>
+		<style>
+			[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+ 				 display: none !important;
+			}
+		</style>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="pageCtrl as vm" ng-cloak>
+			<div ng-if="vm.message">{{vm.message}}</div>
+			<img ng-src="/data/{{vm.hero1.name}}.jpg" height="200" />
+			<img ng-src="/data/{{vm.hero2.name}}.jpg" height="200" />
+			<img ng-src="/data/{{vm.hero3.name}}.jpg" height="200" />
+		</div>
+		<script src="vendor/angular@1.4.7/angular.min.js"></script>
+		<script src="app/app.js"></script>
+	</body>
+</html>

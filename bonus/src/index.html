@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>Bonus - Using Notify</title>
+</head>
+<body>
+	<div ng-controller="pageCtrl as vm">
+		<button ng-click="vm.startFetch()" ng-disabled="vm.loading">Fetch</button>
+		<div ng-if="vm.loading" style="width:200px;border:solid 1px #ccc">
+			<div style="background:#f00;margin:1px" ng-style="{width:vm.loadProgress}">&nbsp;</div>
+		</div>
+		
+		<div ng-if"vm.data">
+			<ul>
+				<li ng-repeat="data in vm.data">{{data}}</li>
+			</ul>
+		</div>
+	</div>
+	<script src="/node_modules/angular/angular.js"></script>
+	<script src="app/app.js"></script>
+</body>
+</html>
